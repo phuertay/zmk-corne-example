@@ -75,7 +75,6 @@
                         >;
                 };
         };
-    };
 
         macros {
                 ZMK_MACRO(spotlight_macro,
