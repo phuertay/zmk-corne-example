@@ -76,6 +76,7 @@
                         >;
                 };
         };
+    };
 
         macros {
                 ZMK_MACRO(spotlight_macro,
@@ -105,13 +106,11 @@
         };
 
         behaviors {
-        td0: ctrl_caps {
+        ctrl_caps: ctrl_caps {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp CTRL>, <&CAPS>, <&caps_word>;
         };
-    };
-
 
 };
