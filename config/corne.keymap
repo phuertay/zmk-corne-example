@@ -22,6 +22,8 @@
 		)
 	};
 
+	&lt { quick_tap_ms = <200>; }
+	
 	combos {
 		compatible = "zmk,combos";
 			combo_esc {
