@@ -14,6 +14,42 @@
 #define WASD 3
 
 / {
+	macros {
+		ZMK_MACRO(spotlight_macro,
+			wait-ms = <30>;
+			tap-ms = <40>;
+			bindings = <&kp LGUI &kp SPACE>;
+		)
+	};
+
+	combos {
+		compatible = "zmk,combos";
+			combo_esc {
+			timeout-ms = <50>;
+			key-positions = <0 1>;
+			bindings = <&kp ESC>;
+		};
+		combo_tilde {
+			timeout-ms = <50>;
+			key-positions = <12 13>;
+			bindings = <&kp ESC>;
+		};
+		combo_spotlight {
+			timeout-ms = <50>;
+			key-positions = <38 39>;
+			bindings = <&spotlight_macro>;
+		};
+	};
+
+	behaviors {
+		ctrl_caps: ctrl_caps {
+			compatible = "zmk,behavior-tap-dance";
+			#binding-cells = <0>;
+			tapping-term-ms = <200>;
+			bindings = <&kp LCTRL>, <&kp CAPS>, <&caps_word>;
+		};
+	};
+	
 	keymap {
 		compatible = "zmk,keymap";
 
@@ -28,7 +64,7 @@
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
    &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-		  &lt BT BT &lt WASD BSPC &mt LGUI SPACE   &kp RET &lt SYMBOLS SYMBOLS &kp RALT
+		  &sl BT &lt WASD BSPC &mt LGUI SPACE   &kp RET &mo SYMBOLS &kp RALT
 			>;
 		};
 		bt_layer {
@@ -73,42 +109,6 @@
    &trans &trans   &trans &trans   &trans   &trans      &kp DOT &kp KP_N1  &kp KP_N2  &kp KP_N3 &kp PLUS &trans
 		    	     &trans &trans   &trans   &trans   &trans    &trans
 			>;
-		};
-	};
-
-	macros {
-		ZMK_MACRO(spotlight_macro,
-			wait-ms = <30>;
-			tap-ms = <40>;
-			bindings = <&kp LGUI &kp SPACE>;
-		)
-	};
-
-	combos {
-		compatible = "zmk,combos";
-			combo_esc {
-			timeout-ms = <50>;
-			key-positions = <0 1>;
-			bindings = <&kp ESC>;
-		};
-		combo_tilde {
-			timeout-ms = <50>;
-			key-positions = <12 13>;
-			bindings = <&kp ESC>;
-		};
-		combo_spotlight {
-			timeout-ms = <50>;
-			key-positions = <38 39>;
-			bindings = <&spotlight_macro>;
-		};
-	};
-
-	behaviors {
-		ctrl_caps: ctrl_caps {
-			compatible = "zmk,behavior-tap-dance";
-			#binding-cells = <0>;
-			tapping-term-ms = <200>;
-			bindings = <&kp LCTRL>, <&kp CAPS>, <&caps_word>;
 		};
 	};
 };
