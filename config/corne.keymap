@@ -20,7 +20,9 @@
 		ZMK_MACRO(spotlight_macro,
 			wait-ms = <30>;
 			tap-ms = <40>;
-			bindings = <&kp LGUI &kp SPACE>;
+			bindings = <&macro_press &kp LGUI>
+                , <&macro_tap &kp SPACE>
+                , <&macro_release &kp LGUI>
 		)
 	};
 	
