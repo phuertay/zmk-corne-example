@@ -13,6 +13,8 @@
 #define SYMBOLS 2
 #define WASD 3
 
+&lt { quick_tap_ms = <200>; }
+
 / {
 	macros {
 		ZMK_MACRO(spotlight_macro,
@@ -21,8 +23,6 @@
 			bindings = <&kp LGUI &kp SPACE>;
 		)
 	};
-
-	&lt { quick_tap_ms = <200>; }
 	
 	combos {
 		compatible = "zmk,combos";
