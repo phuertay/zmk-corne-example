@@ -12,6 +12,7 @@
 #define BT 1
 #define SYMBOLS 2
 #define WASD 3
+#define FGC 4
 
 &lt { quick_tap_ms = <200>; };
 &mt { quick_tap_ms = <200>; };
@@ -49,6 +50,11 @@
 			key-positions = <38 39>;
 			bindings = <&spotlight_macro>;
 		};
+		combo_fgc {
+			timeout-ms = <50>;
+			key-positions = <36 37 38>;
+			bindings = <&tog FGC>;		
+		}
 	};
 
 	behaviors {
@@ -120,5 +126,15 @@
 		    	     &trans &trans   &trans   &trans   &trans    &kp KP_N0
 			>;
 		};
+
+		fgc_layer {
+			display-name = "FGC";
+			bindings = < 
+&trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans &trans   
+&trans &kp LEFT &kp DOWN &kp RIGHT &trans &trans    &trans &trans &trans &trans &trans &trans   
+&trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans &trans   
+		    	     &trans &trans   &kp UP   &kp UP   &trans    &kp KP_N0
+			>;
+		}
 	};
 };
