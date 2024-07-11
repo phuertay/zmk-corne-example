@@ -135,6 +135,6 @@
 &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans &trans   
 		    	     &trans &trans   &kp UP   &kp UP   &trans    &kp KP_N0
 			>;
-		}
+		};
 	};
 };
