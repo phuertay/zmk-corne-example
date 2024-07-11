@@ -131,7 +131,7 @@
 			display-name = "FGC";
 			bindings = < 
 &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans &trans   
-&trans &kp LEFT &kp DOWN &kp RIGHT &trans &trans    &trans &trans &trans &trans &trans &trans   
+&trans &trans &kp LEFT &kp DOWN &kp RIGHT &trans    &trans &trans &trans &trans &trans &trans   
 &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans &trans   
 		    	     &trans &trans   &kp UP   &kp UP   &trans    &kp KP_N0
 			>;
