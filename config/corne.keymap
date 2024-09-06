@@ -13,6 +13,7 @@
 #define SYMBOLS 2
 #define WASD 3
 #define FGC 4
+#define FN 5
 
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 
@@ -42,7 +43,7 @@
 	
 	combos {
 		compatible = "zmk,combos";
-		combo_esc {
+		combo_esc {  
 			timeout-ms = <50>;
 			key-positions = <0 1>;
 			bindings = <&kp ESC>;
@@ -116,7 +117,8 @@
 			timeout-ms = <50>;
 			key-positions = <1 2 3 4>;
 			bindings = <&sl BT>;		
-		};	};
+		};	
+	};
 
 	behaviors {
 		ctrl_caps: ctrl_caps {
@@ -150,7 +152,7 @@
    &kp TAB   AS(Q) AS(W) AS(E) AS(R) AS(T)   AS(Y) AS(U)  AS(I)     AS(O)   AS(P)    &kp BSPC
    &ctrl_caps AS(A) AS(S) AS(D) AS(F) AS(G)   AS(H) AS(J)  AS(K)     AS(L)   &kp SEMI &kp SQT
    &kp LSHFT AS(Z) AS(X) AS(C) AS(V) AS(B)   AS(N) AS(M)  &kp COMMA &kp DOT &kp FSLH &kp ESC
-		  &sl BT &lt WASD SPACE &mt LGUI BSPC   &mt LCTRL RET &lt SYMBOLS TAB &kp RALT
+		  &sl FN &lt WASD SPACE &mt LGUI BSPC   &mt LCTRL RET &lt SYMBOLS TAB &kp RALT
 			>;
 		};
 		bt_layer {
@@ -205,5 +207,16 @@
 		    	     &trans &trans   &kp UP   &kp UP   &trans    &kp KP_N0
 			>;
 		};
+
+		function_layer {
+			display-name = "Num row, Fn row"
+			bindings = <
+			   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
+	&kpF12 &kp F1 &kp F2 &kp F3 &kp F4 &kp F5			&kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11
+   &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
+			  		&trans     &trans       &trans      &trans  &lt SYMBOLS SPACE   &trans
+			>;
+
+		}
 	};
 };
