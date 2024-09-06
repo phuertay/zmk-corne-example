@@ -27,7 +27,7 @@
 			bindings = <&macro_press &kp LGUI>
                 , <&macro_tap &kp SPACE>
                 , <&macro_release &kp LGUI>;
-		)
+		),
 		ZMK_MACRO(emdash_macro,
 			wait-ms = <30>;
 			tap-ms = <40>;
