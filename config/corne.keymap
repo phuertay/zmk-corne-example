@@ -95,7 +95,7 @@
    &kp TAB   AS(Q) AS(W) AS(E) AS(R) AS(T)   AS(Y) AS(U)  AS(I)     AS(O)   AS(P)    &kp BSPC
    &ctrl_caps AS(A) AS(S) AS(D) AS(F) AS(G)   AS(H) AS(J)  AS(K)     AS(L)   &kp SEMI &kp SQT
    &kp LSHFT AS(Z) AS(X) AS(C) AS(V) AS(B)   AS(N) AS(M)  &kp COMMA &kp DOT &kp FSLH &kp ESC
-		  &sl BT &lt WASD SPACE &mt LGUI BSPC   &mt LCTRL RET &mt SYMBOLS TAB &kp RALT
+		  &sl BT &lt WASD SPACE &mt LGUI BSPC   &mt LCTRL RET &lt SYMBOLS TAB &kp RALT
 			>;
 		};
 		bt_layer {
