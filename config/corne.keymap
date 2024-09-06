@@ -32,11 +32,11 @@
 		ZMK_MACRO(emdash_macro,
 			wait-ms = <30>;
 			tap-ms = <40>;
-			bindings = <&macro_press &kp LCTRL>
+			bindings = <&macro_press &kp LSHIFT>
 								, <&macro_press &kp LALT>
                 , <&macro_tap &kp MINUS>
 								, <&macro_release &kp LALT>
-                , <&macro_release &kp LCTRL>;
+                , <&macro_release &kp LSHIFT>;
 		)   
 	};
 	
@@ -74,7 +74,7 @@
 		};
 		combo_paren_close {
 			timeout-ms = <50>;
-			key-positions = <8 9 10>;
+			key-positions = <9 10>;
 			bindings = <&kp RPAR>;
 		};		
 		combo_squarebracket_open {
@@ -84,7 +84,7 @@
 		};
 		combo_squarebracket_close {
 			timeout-ms = <50>;
-			key-positions = <20 21 22>;
+			key-positions = <21 22>;
 			bindings = <&kp RBKT>;
 		};
 		combo_curlybracket_open {
@@ -94,7 +94,7 @@
 		};
 		combo_curlybracket_close {
 			timeout-ms = <50>;
-			key-positions = <32 33 34>;
+			key-positions = <33 34>;
 			bindings = <&kp RBRC>;
 		};		
 		combo_backtick {
