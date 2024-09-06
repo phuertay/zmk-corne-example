@@ -27,14 +27,15 @@
 			bindings = <&macro_press &kp LGUI>
                 , <&macro_tap &kp SPACE>
                 , <&macro_release &kp LGUI>;
-		);
+		)
+
 		ZMK_MACRO(emdash_macro,
 			wait-ms = <30>;
 			tap-ms = <40>;
 			bindings = <&macro_press &kp LCTRL>
 								, <&macro_press &kp LALT>
                 , <&macro_tap &kp MINUS>
-								, <&macro_release &kp LALT
+								, <&macro_release &kp LALT>
                 , <&macro_release &kp LCTRL>;
 		)   
 	};
