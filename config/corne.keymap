@@ -63,6 +63,46 @@
       key-positions = <18 19 20>;
       bindings = <&emdash_macro>;
     };
+    combo_hyphen {
+      timeout-ms = <50>;
+      key-positions = <18 19>;
+      bindings = <&kp MINUS>;
+    };
+    combo_underscore {
+      timeout-ms = <50>;
+      key-positions = <30 31>;
+      bindings = <&kp UNDER>;
+    };
+    combo_paren_open {
+      timeout-ms = <50>;
+      key-positions = <8 9>;
+      bindings = <&kp LPAR>;
+    };
+    combo_paren_close {
+      timeout-ms = <50>;
+      key-positions = <9 10>;
+      bindings = <&kp RPAR>;
+    };
+    combo_squarebracket_open {
+      timeout-ms = <50>;
+      key-positions = <20 21>;
+      bindings = <&kp LBKT>;
+    };
+    combo_squarebracket_close {
+      timeout-ms = <50>;
+      key-positions = <21 22>;
+      bindings = <&kp RBKT>;
+    };
+    combo_curlybracket_open {
+      timeout-ms = <50>;
+      key-positions = <32 33>;
+      bindings = <&kp LBRC>;
+    };
+    combo_curlybracket_close {
+      timeout-ms = <50>;
+      key-positions = <33 34>;
+      bindings = <&kp RBRC>;
+    };
     combo_spotlight {
       timeout-ms = <50>;
       key-positions = <38 39>;
