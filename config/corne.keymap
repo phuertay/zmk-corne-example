@@ -29,16 +29,6 @@
                 , <&macro_tap &kp SPACE>
                 , <&macro_release &kp LGUI>;
     )
-
-    ZMK_MACRO(emdash_macro,
-      wait-ms = <30>;
-      tap-ms = <40>;
-      bindings = <&macro_press &kp LSHIFT>
-                , <&macro_press &kp LALT>
-                , <&macro_tap &kp MINUS>
-                , <&macro_release &kp LALT>
-                , <&macro_release &kp LSHIFT>;
-    )
   };
 
   combos {
@@ -57,11 +47,6 @@
       timeout-ms = <50>;
       key-positions = <18 19>;
       bindings = <&kp MINUS>;
-    };
-    combo_emdash {
-      timeout-ms = <50>;
-      key-positions = <18 19 20>;
-      bindings = <&emdash_macro>;
     };
     combo_underscore {
       timeout-ms = <50>;
