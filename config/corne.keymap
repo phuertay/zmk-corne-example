@@ -122,17 +122,10 @@
       key-positions = <1 2 3 4>;
       bindings = <&sl BT>;
     };  
-    combo_to_ardux {
+    combo_ardux {
       timeout-ms = <50>;
       key-positions = <25 26 27 28>;
-      bindings = <&to ARDUX_LAYER>;
-      layers = ALL_LAYERS_NO_ARDUX;
-    };
-    combo_from_ardux {
-      timeout-ms = <50>;
-      key-positions = <25 26 27 28>;
-      bindings = <&to DEFAULT>;
-      layers = ARDUX_LAYERS;
+      bindings = <&tog ARDUX_LAYER>;
     };
   };
 
