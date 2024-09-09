@@ -51,16 +51,19 @@
       timeout-ms = <50>;
       key-positions = <1 2>;
       bindings = <&kp ESC>;
+      layers = ALL_LAYERS_NO_ARDUX;
     };
     combo_tilde {
       timeout-ms = <50>;
       key-positions = <13 14>;
       bindings = <&kp TILDE>;
+      layers = ALL_LAYERS_NO_ARDUX;
     };
     combo_backtick {
       timeout-ms = <50>;
       key-positions = <25 26>;
       bindings = <&kp GRAVE>;
+      layers = ALL_LAYERS_NO_ARDUX;
     };
     combo_emdash {
       timeout-ms = <50>;
