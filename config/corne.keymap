@@ -63,7 +63,7 @@
       timeout-ms = <50>;
       key-positions = <18 19 20>;
       bindings = <&emdash_macro>;
-    };
+    };         
     combo_hyphen {
       timeout-ms = <50>;
       key-positions = <18 19>;
@@ -120,11 +120,7 @@
       bindings = <&sl BT>;
       layers = ALL_LAYERS_NO_ARDUX;
     };  
-    combo_ardux {
-      timeout-ms = <50>;
-      key-positions = <25 26 27 28>;
-      bindings = <&tog ARDUX_LAYER>;
-    };
+ 
     combo_esc {
       timeout-ms = <50>;
       key-positions = <0 1>;
@@ -184,7 +180,7 @@
       bindings = <
    &kp TAB   AS(Q) AS(W) AS(E) AS(R) AS(T)   AS(Y) AS(U)  AS(I)     AS(O)   AS(P)    /*&kp BSPC*/ &none 
    /*&ctrl_caps*/ &none AS(A) AS(S) AS(D) AS(F) AS(G)   AS(H) AS(J)  AS(K)     AS(L)   AS(SEMI) AS(SQT) 
-   &kp LSHFT &none AS(Z) AS(X) AS(C) AS(V) AS(B)   AS(N) AS(M)  AS(COMMA) AS(DOT) AS(FSLH) /*&kp ESC*/ &none 
+   &kp LSHFT AS(Z) AS(X) AS(C) AS(V) AS(B)   AS(N) AS(M)  AS(COMMA) AS(DOT) AS(FSLH) /*&kp ESC*/ &none 
       &sl FN &lt WASD SPACE &mt LGUI BSPC   &mt LCTRL RET &lt SYMBOLS TAB &kp RALT
       >;
     };
