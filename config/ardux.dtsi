@@ -99,7 +99,7 @@
 // Define Offsets
 #define LEADING_NONES NONE(0,0,1)
 #define MIDDLE_NONES NONE(0, 0, 8)
-#define TRAILING_NONES NONE(0, 1, 25)
+#define TRAILING_NONES NONE(0, 2, 5)
 
 #define BIG_LEADING_NONES NONE(0, 0, 0)
 #define BIG_BETWEEN_ROW_ONE_TWO_NONES NONE(0, 0, 0)

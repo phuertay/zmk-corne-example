@@ -262,6 +262,10 @@
 #define KEY_F_TOP 5
 #define KEY_F_BOTTOM 17
 
+// I had defined the whitespace constants here,
+// but they have to be after NONE is defined,
+// so they've been moved into the DTSI
+
 // I deleted some definitions like THUMB_1, 
 // need to figure out how to handle thumbs and exiting
 
