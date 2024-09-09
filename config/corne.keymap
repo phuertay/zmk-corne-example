@@ -121,6 +121,7 @@
       timeout-ms = <50>;
       key-positions = <1 2 3 4>;
       bindings = <&sl BT>;
+      layers = ALL_LAYERS_NO_ARDUX;
     };  
     combo_ardux {
       timeout-ms = <50>;
