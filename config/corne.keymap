@@ -14,6 +14,10 @@
 #define WASD 3
 #define FGC 4
 #define FN 5
+#define ARDUX_LAYER 6
+
+#define ALL_LAYERS_NO_ARDUX <0 1 2 3 4 5 6>
+#define ARDUX_LAYERS <7 8 9 10 11 12 13 14 15>
 
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 
@@ -117,7 +121,19 @@
       timeout-ms = <50>;
       key-positions = <1 2 3 4>;
       bindings = <&sl BT>;
-    };
+    };  
+    combo_to_ardux {
+      timeout-ms = <50>;
+      key-positions = <25 26 27 28>;
+      bindings = <&to ARDUX_LAYER>;
+      layers = ALL_LAYERS_NO_ARDUX;
+    }
+    combo_from_ardux {
+      timeout-ms = <50>;
+      key-positions = <25 26 27 28>;
+      bindings = <&to DEFAULT>;
+      layers = ARDUX_LAYERS;
+    }
   };
 
   behaviors {
@@ -131,7 +147,7 @@
      as: auto_shift {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping_term_ms = <150>;
+            tapping_term_ms = <170>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -219,3 +235,45 @@
     };
   };
 };
+
+// Setup left ardux
+// Taken from github:arduxio/zmk-ardux/config/boards/shields/corne_left/corne_ardux_left.keymap
+
+// Enable ARDUX Left
+#define ARDUX_LEFT 1
+
+// #define ARDUX_BIG 1
+
+// ARTS Row
+#define KEY_A 4
+#define KEY_R 3
+#define KEY_T 2
+#define KEY_S 1
+
+// EYIO Row
+// Original repo numbers didn't assume a right half
+#define KEY_E 16
+#define KEY_Y 15
+#define KEY_I 14
+#define KEY_O 13
+
+// Big ardux F1-12 layer keys for combo
+// If using these, update offsets
+#define KEY_F_TOP 5
+#define KEY_F_BOTTOM 17
+
+// Define Offsets
+#define LEADING_NONES NONE(0,0,1)
+#define MIDDLE_NONES NONE(0, 0, 8)
+#define TRAILING_NONES NONE(0, 1, 25)
+
+#define BIG_LEADING_NONES NONE(0, 0, 0)
+#define BIG_BETWEEN_ROW_ONE_TWO_NONES NONE(0, 0, 0)
+#define BIG_BETWEEN_ROW_TWO_THREE_NONES NONE(0, 0, 0)
+#define BIG_BETWEEN_ROW_THREE_THUMBS NONE(0, 0, 0)
+#define BIG_TRAILING_NONES NONE(0, 0, 0)
+
+// I deleted some definitions like THUMB_1, 
+// need to figure out how to handle thumbs and exiting
+
+#include "ardux.dtsi"
