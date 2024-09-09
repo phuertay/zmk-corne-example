@@ -136,7 +136,7 @@
       key-positions = <4 17>;
       bindings = <&kp LGUI &kp TAB>;
     };
-    combo_nextwindow {
+    combo_previouswindow {
       timeout-ms = <50>;
       key-positions = <3 16>;
       bindings = <&kp LGUI &kp LSHIFT &kp TAB>;
