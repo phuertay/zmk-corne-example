@@ -131,6 +131,26 @@
       bindings = <&kp ESC>;
       layers = ALL_LAYERS_NO_ARDUX;
     };
+    combo_nextwindow {
+      timeout-ms = <50>;
+      key-positions = <4 17>;
+      bindings = <&kp LGUI &kp TAB>;
+    };
+    combo_nextwindow {
+      timeout-ms = <50>;
+      key-positions = <3 16>;
+      bindings = <&kp LGUI &kp LSHIFT &kp TAB>;
+    };   
+    combo_previoustab {
+      timeout-ms = <50>;
+      key-positions = <7 18>;
+      bindings = <&kp LGUI &kp LSHIFT &kp LBKT>;
+    };
+    combo_nexttab {
+      timeout-ms = <50>;
+      key-positions = <8 19>;
+      bindings = <&kp LGUI &kp LSHIFT &kp RBKT>;
+    };     
   };
 
   behaviors {
@@ -162,7 +182,7 @@
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
       display-name = "Base";
       bindings = <
-   &kp TAB   AS(Q) AS(W) AS(E) AS(R) AS(T)   AS(Y) AS(U)  AS(I)     AS(O)   AS(P)    /*&kp BSPC*/ &none 
+   /*&kp TAB*/ &none   AS(Q) AS(W) AS(E) AS(R) AS(T)   AS(Y) AS(U)  AS(I)     AS(O)   AS(P)    /*&kp BSPC*/ &none 
    /*&ctrl_caps*/ &none AS(A) AS(S) AS(D) AS(F) AS(G)   AS(H) AS(J)  AS(K)     AS(L)   AS(SEMI) AS(SQT) 
    /*&kp LSHFT*/ &none AS(Z) AS(X) AS(C) AS(V) AS(B)   AS(N) AS(M)  AS(COMMA) AS(DOT) AS(FSLH) /*&kp ESC*/ &none 
       &sl FN &lt WASD SPACE &mt LGUI BSPC   &mt LCTRL RET &lt SYMBOLS TAB &kp RALT
