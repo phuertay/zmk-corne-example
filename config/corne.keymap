@@ -236,7 +236,7 @@
 // Enable ARDUX Left
 #define ARDUX_LEFT 1
 
-// #define ARDUX_BIG 1
+#define ARDUX_BIG 1
 
 // ARTS Row
 #define KEY_A 4
