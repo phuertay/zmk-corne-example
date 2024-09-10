@@ -17,7 +17,7 @@
 #define ARDUX_LAYER 6
 
 #define ALL_LAYERS_NO_ARDUX <0 1 2 3 4 5>
-#define ARDUX_LAYERS <7 8 9 10 11 12 13 14 15>
+#define ARDUX_LAYERS <6 7 8 9 10 11 12 13 14 15>
 
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 

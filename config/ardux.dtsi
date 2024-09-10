@@ -289,6 +289,7 @@
 		combo_tab_ardux             { layers = ARDUX_LAYERS; timeout-ms = <TIMEOUT_COMBO_4>; key-positions = <KEY_A KEY_R KEY_T KEY_O>; bindings = <&kp TAB>; };
 		combo_space_ardux           { layers = ARDUX_LAYERS; timeout-ms = <TIMEOUT_COMBO_4>; key-positions = <KEY_E KEY_Y KEY_I KEY_O>; bindings = <&kp SPACE>; };
 		combo_shift_ardux           { layers = ARDUX_LAYERS; timeout-ms = <TIMEOUT_COMBO_4>; key-positions = <KEY_E KEY_R KEY_T KEY_S>; bindings = <&sk LSHFT>; };
+
 		// I personally don't want these, I handle BT elsewhere
 		// combo_layer_bt_select { layers = ARDUX_LAYERS; timeout-ms = <TIMEOUT_COMBO_4>; key-positions = <KEY_A KEY_E KEY_S KEY_O>; bindings = <&tog LAYER_ID_BT_SEL>; };
 		// combo_bt_clr_ardux          { layers = ARDUX_LAYERS; timeout-ms = <TIMEOUT_COMBO_4>; key-positions = <KEY_R KEY_Y KEY_T KEY_I>; bindings = <&bt BT_CLR>; };
