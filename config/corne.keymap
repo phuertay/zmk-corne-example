@@ -21,6 +21,8 @@
 
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 
+#define combo_length 100
+
 &lt { quick_tap_ms = <200>; };
 &mt { quick_tap_ms = <200>; };
 
@@ -43,64 +45,72 @@
               , <&macro_release &kp LALT>
               , <&macro_release &kp LSHIFT>;
     )
+
+     ZMK_MACRO(nextwindow_macro,
+      wait-ms = <30>;
+      tap-ms = <40>;
+      bindings = <&macro_press &kp LGUI>
+              , <&macro_tap &kp TAB>
+              , <&macro_release &kp LGUI>;
+    )
   };
 
   combos {
     compatible = "zmk,combos";
     combo_tilde {
-      timeout-ms = <50>;
+      timeout-ms = <combo_length>;
       key-positions = <13 14>;
       bindings = <&kp TILDE>;
       layers = ALL_LAYERS_NO_ARDUX;
     };
     combo_backtick {
-      timeout-ms = <50>;
+      timeout-ms = <combo_length>;
       key-positions = <25 26>;
       bindings = <&kp GRAVE>;
       layers = ALL_LAYERS_NO_ARDUX;
     };
     combo_emdash {
-      timeout-ms = <50>;
+      timeout-ms = <combo_length>;
       key-positions = <18 19 20>;
       bindings = <&emdash_macro>;
     };         
     combo_hyphen {
-      timeout-ms = <50>;
+      timeout-ms = <combo_length>;
       key-positions = <18 19>;
       bindings = <&kp MINUS>;
     };
     combo_underscore {
-      timeout-ms = <50>;
+      timeout-ms = <combo_length>;
       key-positions = <30 31>;
       bindings = <&kp UNDER>;
     };
     combo_paren_open {
-      timeout-ms = <50>;
+      timeout-ms = <combo_length>;
       key-positions = <8 9>;
       bindings = <&kp LPAR>;
     };
     combo_paren_close {
-      timeout-ms = <50>;
+      timeout-ms = <combo_length>;
       key-positions = <9 10>;
       bindings = <&kp RPAR>;
     };
     combo_squarebracket_open {
-      timeout-ms = <50>;
+      timeout-ms = <combo_length>;
       key-positions = <20 21>;
       bindings = <&kp LBKT>;
     };
     combo_squarebracket_close {
-      timeout-ms = <50>;
+      timeout-ms = <combo_length>;
       key-positions = <21 22>;
       bindings = <&kp RBKT>;
     };
     combo_curlybracket_open {
-      timeout-ms = <50>;
+      timeout-ms = <combo_length>;
       key-positions = <32 33>;
       bindings = <&kp LBRC>;
     };
     combo_curlybracket_close {
-      timeout-ms = <50>;
+      timeout-ms = <combo_length>;
       key-positions = <33 34>;
       bindings = <&kp RBRC>;
     };
@@ -122,28 +132,28 @@
     };  
  
     combo_esc {
-      timeout-ms = <50>;
+      timeout-ms = <combo_length>;
       key-positions = <0 1>;
       bindings = <&kp ESC>;
       layers = ALL_LAYERS_NO_ARDUX;
     };
     combo_nextwindow {
-      timeout-ms = <50>;
+      timeout-ms = <combo_length>;
       key-positions = <4 17>;
-      bindings = <&kp LGUI &kp TAB>;
+      bindings = <&nextwindow_macro>;
     };
     combo_previouswindow {
-      timeout-ms = <50>;
+      timeout-ms = <combo_length>;
       key-positions = <3 16>;
       bindings = <&kp LGUI &kp LSHIFT &kp TAB>;
     };   
     combo_previoustab {
-      timeout-ms = <50>;
+      timeout-ms = <combo_length>;
       key-positions = <7 18>;
       bindings = <&kp LGUI &kp LSHIFT &kp LBKT>;
     };
     combo_nexttab {
-      timeout-ms = <50>;
+      timeout-ms = <combo_length>;
       key-positions = <8 19>;
       bindings = <&kp LGUI &kp LSHIFT &kp RBKT>;
     };     
