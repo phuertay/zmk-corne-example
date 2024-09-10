@@ -21,7 +21,7 @@
 
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 
-#define combo_length 100
+#define combo_length 150
 
 &lt { quick_tap_ms = <200>; };
 &mt { quick_tap_ms = <200>; };
@@ -44,14 +44,6 @@
               , <&macro_tap &kp MINUS>
               , <&macro_release &kp LALT>
               , <&macro_release &kp LSHIFT>;
-    )
-
-     ZMK_MACRO(nextwindow_macro,
-      wait-ms = <30>;
-      tap-ms = <40>;
-      bindings = <&macro_press &kp LGUI>
-              , <&macro_tap &kp TAB>
-              , <&macro_release &kp LGUI>;
     )
   };
 
@@ -137,26 +129,31 @@
       bindings = <&kp ESC>;
       layers = ALL_LAYERS_NO_ARDUX;
     };
-    combo_nextwindow {
-      timeout-ms = <combo_length>;
-      key-positions = <4 17>;
-      bindings = <&nextwindow_macro>;
+    combo_ardux {
+      timeout-ms = <50>;
+      key-positions = <25 26 27 28>;
+      bindings = <&tog ARDUX_LAYER>;
     };
-    combo_previouswindow {
-      timeout-ms = <combo_length>;
-      key-positions = <3 16>;
-      bindings = <&kp LGUI &kp LSHIFT &kp TAB>;
-    };   
-    combo_previoustab {
-      timeout-ms = <combo_length>;
-      key-positions = <7 18>;
-      bindings = <&kp LGUI &kp LSHIFT &kp LBKT>;
-    };
-    combo_nexttab {
-      timeout-ms = <combo_length>;
-      key-positions = <8 19>;
-      bindings = <&kp LGUI &kp LSHIFT &kp RBKT>;
-    };     
+    // combo_nextwindow {
+    //   timeout-ms = <combo_length>;
+    //   key-positions = <4 17>;
+    //   bindings = <&nextwindow_macro>;
+    // };
+    // combo_previouswindow {
+    //   timeout-ms = <combo_length>;
+    //   key-positions = <3 16>;
+    //   bindings = <&kp LGUI &kp LSHIFT &kp TAB>;
+    // };   
+    // combo_previoustab {
+    //   timeout-ms = <combo_length>;
+    //   key-positions = <7 18>;
+    //   bindings = <&kp LGUI &kp LSHIFT &kp LBKT>;
+    // };
+    // combo_nexttab {
+    //   timeout-ms = <combo_length>;
+    //   key-positions = <8 19>;
+    //   bindings = <&kp LGUI &kp LSHIFT &kp RBKT>;
+    // };     
   };
 
   behaviors {
@@ -292,4 +289,4 @@
 // I deleted some definitions like THUMB_1, 
 // need to figure out how to handle thumbs and exiting
 
-// #include "ardux.dtsi"
+#include "ardux.dtsi"
