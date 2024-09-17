@@ -18,6 +18,7 @@
 
 #define ALL_LAYERS_NO_ARDUX <0 1 2 3 4 5>
 #define ARDUX_LAYERS <6 7 8 9 10 11 12 13 14 15>
+#define QWERTY_CHAR_LAYERS <DEFAULT, SYMBOLS, FN>
 
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 
@@ -53,63 +54,73 @@
       timeout-ms = <combo_length>;
       key-positions = <13 14>;
       bindings = <&kp TILDE>;
-      layers = ALL_LAYERS_NO_ARDUX;
+      layers = QWERTY_CHAR_LAYERS;
     };
     combo_backtick {
       timeout-ms = <combo_length>;
       key-positions = <25 26>;
       bindings = <&kp GRAVE>;
-      layers = ALL_LAYERS_NO_ARDUX;
+      layers = QWERTY_CHAR_LAYERS;
     };
     combo_emdash {
       timeout-ms = <combo_length>;
       key-positions = <18 19 20>;
       bindings = <&emdash_macro>;
+      layers = <QWERTY_CHAR_LAYERS>;
     };         
     combo_hyphen {
       timeout-ms = <combo_length>;
       key-positions = <18 19>;
       bindings = <&kp MINUS>;
+      layers = <QWERTY_CHAR_LAYERS>;
     };
     combo_underscore {
       timeout-ms = <combo_length>;
       key-positions = <30 31>;
       bindings = <&kp UNDER>;
+      layers = <QWERTY_CHAR_LAYERS>;
     };
     combo_paren_open {
       timeout-ms = <combo_length>;
       key-positions = <8 9>;
       bindings = <&kp LPAR>;
+      layers = <QWERTY_CHAR_LAYERS>;
     };
     combo_paren_close {
       timeout-ms = <combo_length>;
       key-positions = <9 10>;
       bindings = <&kp RPAR>;
+      layers = <QWERTY_CHAR_LAYERS>;
     };
     combo_squarebracket_open {
       timeout-ms = <combo_length>;
       key-positions = <20 21>;
       bindings = <&kp LBKT>;
+      layers = <QWERTY_CHAR_LAYERS>;
     };
     combo_squarebracket_close {
       timeout-ms = <combo_length>;
       key-positions = <21 22>;
       bindings = <&kp RBKT>;
+      layers = <QWERTY_CHAR_LAYERS>;
     };
     combo_curlybracket_open {
       timeout-ms = <combo_length>;
       key-positions = <32 33>;
       bindings = <&kp LBRC>;
+      layers = <QWERTY_CHAR_LAYERS>;
     };
     combo_curlybracket_close {
       timeout-ms = <combo_length>;
       key-positions = <33 34>;
       bindings = <&kp RBRC>;
+      layers = <QWERTY_CHAR_LAYERS>;
     };
     combo_spotlight {
       timeout-ms = <50>;
       key-positions = <38 39>;
       bindings = <&spotlight_macro>;
+      layers = <QWERTY_CHAR_LAYERS>;
     };
     combo_bt {
       timeout-ms = <50>;
