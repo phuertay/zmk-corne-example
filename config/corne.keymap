@@ -18,7 +18,7 @@
 
 #define ALL_LAYERS_NO_ARDUX <0 1 2 3 4 5>
 #define ARDUX_LAYERS <6 7 8 9 10 11 12 13 14 15>
-#define QWERTY_CHAR_LAYERS <DEFAULT, SYMBOLS, FN>
+#define QWERTY_CHAR_LAYERS <DEFAULT SYMBOLS FN>
 
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 
@@ -66,90 +66,83 @@
       timeout-ms = <combo_length>;
       key-positions = <18 19 20>;
       bindings = <&emdash_macro>;
-      layers = <QWERTY_CHAR_LAYERS>;
+      layers = QWERTY_CHAR_LAYERS;
     };         
     combo_hyphen {
       timeout-ms = <combo_length>;
       key-positions = <18 19>;
       bindings = <&kp MINUS>;
-      layers = <QWERTY_CHAR_LAYERS>;
+      layers = QWERTY_CHAR_LAYERS;
     };
     combo_underscore {
       timeout-ms = <combo_length>;
       key-positions = <30 31>;
       bindings = <&kp UNDER>;
-      layers = <QWERTY_CHAR_LAYERS>;
+      layers = QWERTY_CHAR_LAYERS;
     };
     combo_paren_open {
       timeout-ms = <combo_length>;
       key-positions = <8 9>;
       bindings = <&kp LPAR>;
-      layers = <QWERTY_CHAR_LAYERS>;
+      layers = QWERTY_CHAR_LAYERS;
     };
     combo_paren_close {
       timeout-ms = <combo_length>;
       key-positions = <9 10>;
       bindings = <&kp RPAR>;
-      layers = <QWERTY_CHAR_LAYERS>;
+      layers = QWERTY_CHAR_LAYERS;
     };
     combo_squarebracket_open {
       timeout-ms = <combo_length>;
       key-positions = <20 21>;
       bindings = <&kp LBKT>;
-      layers = <QWERTY_CHAR_LAYERS>;
+      layers = QWERTY_CHAR_LAYERS;
     };
     combo_squarebracket_close {
       timeout-ms = <combo_length>;
       key-positions = <21 22>;
       bindings = <&kp RBKT>;
-      layers = <QWERTY_CHAR_LAYERS>;
+      layers = QWERTY_CHAR_LAYERS;
     };
     combo_curlybracket_open {
       timeout-ms = <combo_length>;
       key-positions = <32 33>;
       bindings = <&kp LBRC>;
-      layers = <QWERTY_CHAR_LAYERS>;
+      layers = QWERTY_CHAR_LAYERS;
     };
     combo_curlybracket_close {
       timeout-ms = <combo_length>;
       key-positions = <33 34>;
       bindings = <&kp RBRC>;
-      layers = <QWERTY_CHAR_LAYERS>;
+      layers = QWERTY_CHAR_LAYERS;
     };
     combo_spotlight {
       timeout-ms = <50>;
       key-positions = <38 39>;
       bindings = <&spotlight_macro>;
-      layers = <QWERTY_CHAR_LAYERS>;
+      layers = QWERTY_CHAR_LAYERS;
     };
     combo_bt {
       timeout-ms = <50>;
       key-positions = <1 2 3 4>;
       bindings = <&sl BT>;
-      layers = ALL_LAYERS_NO_ARDUX;
+      layers = QWERTY_CHAR_LAYERS;
     };  
  
     combo_esc {
       timeout-ms = <combo_length>;
       key-positions = <0 1>;
       bindings = <&kp ESC>;
-      layers = ALL_LAYERS_NO_ARDUX;
+      layers = QWERTY_CHAR_LAYERS;
     };
     combo_ardux {
       timeout-ms = <50>;
       key-positions = <25 26 27 28>;
       bindings = <&tog ARDUX_LAYER>;
     };
-    combo_enter_steno {
-      timeout-ms = <50>;
-      key-positions = <13 14 15 16>;
-      layers = <DEFAULT>;
-      bindings = <&tog STENO>;
-    };
-    combo_exit_steno {
+    combo_steno {
       timeout-ms = <50>;
       key-positions = <36 41>;
-      layers = <STENO>;
       bindings = <&tog STENO>;
     };
     // combo_nextwindow {
@@ -313,4 +306,5 @@
 // I deleted some definitions like THUMB_1, 
 // need to figure out how to handle thumbs and exiting
 
+// Finally include Ardux itself
 #include "ardux.dtsi"
